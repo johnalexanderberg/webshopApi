@@ -41,7 +41,9 @@ public class DbInitializer
             }
         };
         
+        categories[0].Products.Add(products[1]);
         context.Products.AddRange(products);
+        context.Categories.AddRange(categories);
         context.SaveChanges();
     }
 }
